@@ -1,0 +1,22 @@
+{
+  "name": "diabetes-train-job",
+  "tasks": [
+    {
+      "task_key": "train",
+      "notebook_task": {
+        "notebook_path": "/Repos/<YOUR-USERNAME>/databricks-ml-demo/01_train_and_log.py"
+      },
+      "job_cluster_key": "j1"
+    }
+  ],
+  "job_clusters": [
+    {
+      "job_cluster_key": "j1",
+      "new_cluster": {
+        "spark_version": "14.3.x-scala2.12",
+        "node_type_id": "Standard_DS3_v2",
+        "num_workers": 1
+      }
+    }
+  ]
+}
