@@ -1,6 +1,7 @@
 # 01_train_and_log.py
 import mlflow
 import mlflow.sklearn
+from sklearn.metrics import root_mean_squared_error
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -19,7 +20,7 @@ with mlflow.start_run():
     model.fit(X_train, y_train)
 
     preds = model.predict(X_test)
-    rmse = mean_squared_error(y_test, preds, squared=False)
+    rmse = root_mean_squared_error(y_test, preds)
     mlflow.log_metric("rmse", rmse)
 
     # register model into Model Registry
