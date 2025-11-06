@@ -23,7 +23,13 @@ with mlflow.start_run():
     rmse = root_mean_squared_error(y_test, preds)
     mlflow.log_metric("rmse", rmse)
 
+    registered_name = "tejas_catalog.demo_ml.diabetes_rf"
+    
     # register model into Model Registry
-    mlflow.sklearn.log_model(model, artifact_path="model", registered_model_name="diabetes_rf")
+    mlflow.sklearn.log_model(
+    model,
+    artifact_path="model",
+    registered_model_name=registered_name
+)
 
     print("Completed training. RMSE:", rmse)
