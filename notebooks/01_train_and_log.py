@@ -16,7 +16,7 @@ EXPERIMENT_PATH = "/Shared/diabetes-demo"
 
 # Replace this with your fully-qualified Unity Catalog name: catalog.schema.model_name
 # Example: "main.demo_ml.diabetes_rf"
-registered_name = "main.demo_ml.diabetes_rf"
+registered_name = "tejas_catalog.demo_ml.diabetes_rf"
 
 # Fallback artifact path (when registry registration fails)
 FALLBACK_ARTIFACT_PATH = "model_artifact_only"
